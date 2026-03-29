@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-trpc
+  namespace: nodejs-trpc
+  labels:
+    app: nodejs-trpc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-trpc
+  template:
+    metadata:
+      labels:
+        app: nodejs-trpc
+    spec:
+      containers:
+      - name: nodejs-trpc
+        image: nodejs-trpc
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+          name: http
+          protocol: TCP
+      restartPolicy: Always

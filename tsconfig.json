@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2021",
+    "strict": false,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  }
+}
