@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-trpc",
+  "version": "1.0.0",
+  "registry": {
+    "mode": "local"
+  },
+  "services": [
+    {
+      "name": "nodejs-trpc",
+      "path": ".",
+      "image": "nodejs-trpc",
+      "manifests": ".gws/k8s",
+      "dockerfile": ".gws/Dockerfile"
+    }
+  ],
+  "provision": {
+    "environments": {
+      "dev": {
+        "type": "k3d"
+      }
+    }
+  }
+}
